@@ -24,7 +24,7 @@ const calculate = document.getElementById('equals');
 const display = document.getElementById('output')
 const values = document.querySelectorAll('#num');
 const clear = document.getElementById('clr');
-const mult = document.getElementById('mult');
+const operadores = document.querySelectorAll('#opr');
 
 
 
@@ -39,12 +39,24 @@ clear.addEventListener('click', () => {
     display.textContent = ''
 })
 
+operadores.forEach(button => {
+    button.addEventListener('click', () => {
+        display.textContent += button.value;
+    })
+});
 
 
-calculate.addEventListener('click', () => {
-    let answer = operate();
+
+calculate.addEventListener('click', (oper, numA, numB) => {
+    display.textContent.split(oper)
+    numA = parseInt(values).value;
+    numB = parseInt(values).value
+    oper = operadores 
+    answer = operate(oper, numA, numB);
+    console.log(answer);
     return display.textContent = answer;
 })
+
 
 
 
@@ -88,7 +100,4 @@ function operate(operator, a, b) {
         default: 
             return null;
     }
-
 }
-
-
