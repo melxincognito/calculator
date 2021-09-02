@@ -41,18 +41,22 @@ h1 {
 }
 
 .output {
-    background-color: transparent;
+    background-color: white;
+    opacity: 50%;
     border: dotted;
     padding: 30px;
-    color: white;
+    color: black;
     width: 250px;
     height: 30px;
     font-family: pacifico;
     font-size: 20px;
-  
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    
 }
 
-button {
+input {
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -62,8 +66,9 @@ button {
     font-family: pacifico;
     font-size: 35px;
     align-content: center;
-    
+
 }
+
 
 .equals {
     width: 160px;

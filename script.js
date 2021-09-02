@@ -23,6 +23,10 @@ function factorial(num) {
 const calculate = document.getElementById('equals');
 const display = document.getElementById('output')
 const values = document.querySelectorAll('button');
+const clear = document.getElementById('clr');
+const mult = document.getElementById('mult');
+
+
 
 
 
@@ -32,11 +36,19 @@ values.forEach(button => {
     });
 });
 
+clear.addEventListener('click', () => {
+    display.textContent = ''
+})
+
 
 
 calculate.addEventListener('click', () => {
-    display.textContent
+    let answer = operate();
+    return display.textContent = answer;
 })
+
+
+
 
 
 
