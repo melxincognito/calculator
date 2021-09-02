@@ -22,17 +22,16 @@ function factorial(num) {
   
 const calculate = document.getElementById('equals');
 const display = document.getElementById('output')
-const values = document.querySelectorAll('button');
+const values = document.querySelectorAll('#num');
 const clear = document.getElementById('clr');
 const mult = document.getElementById('mult');
 
 
 
 
-
 values.forEach(button => {
     button.addEventListener('click', () => {
-        display.textContent += button.innerHTML
+        display.textContent += button.value;
     });
 });
 
