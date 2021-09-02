@@ -20,9 +20,28 @@ function factorial(num) {
 };
 
   
-function operate() {
+const calculate = document.getElementById('equals');
+const display = document.getElementById('output')
+const values = document.querySelectorAll('button');
 
-}
+
+
+values.forEach(button => {
+    button.addEventListener('click', () => {
+        display.textContent += button.innerHTML
+    });
+});
+
+
+
+calculate.addEventListener('click', () => {
+    display.textContent
+})
+
+
+
+
+
 
 const operators = {
     add: function(a,b){
@@ -41,3 +60,24 @@ const operators = {
         return Math.pow(a, b);
     },
 }
+
+function operate(operator, a, b) {
+    a = Number(a);
+    b = Number(b);
+    switch(operator) {
+        case '+':
+            return operators.add(a, b);
+        case '-':
+            return operators.minus(a, b);
+        case 'x':
+            return operators.multiply(a, b);
+        case '/':
+            if (b === 0) return null 
+            else return operators.divide(a, b);
+        default: 
+            return null;
+    }
+
+}
+
+
