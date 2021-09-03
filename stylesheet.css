@@ -17,6 +17,10 @@ h1 {
         -webkit-text-fill-color: transparent;
 }
 
+.grid {
+    display: flex;
+    margin-top: 50px;
+}
 
 .btns {
     display: flex;
@@ -104,4 +108,19 @@ input {
 #num {
     color: hotpink;
 
+}
+
+
+.history {
+    margin-right: 300px;
+}
+
+#hist {
+    color: white;
+    font-family: pacifico;
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 200px;
 }

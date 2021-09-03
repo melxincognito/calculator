@@ -8,6 +8,8 @@ const operatorDisplay = document.getElementById('operator');
 const numOneDisplay = document.getElementById('numOne');
 const numTwoDisplay = document.getElementById('num2');
 const results = document.getElementById('output');
+const history = document.getElementById('history');
+const calcContainer = document.getElementById('results');
 
 let num1= 0;
 let num2= 0;
@@ -49,14 +51,28 @@ clear.addEventListener('click', () => {
     
 })
 
+clear.addEventListener('dblclick', () => {
+    numOneDisplay.textContent = '';
+    operatorDisplay.textContent = '';
+    numTwoDisplay.textContent = '';
+    results.textContent = '';
+    history.removeChild(hist);
+
+    num1 = 0;
+    num2 = 0;
+})
+
+
 
 
 calculate.addEventListener('click', () => { 
     answer = operate(oper, num1, num2);
-    results.textContent = '= ' + answer.toFixed(3);
-    
+    results.textContent = '= ' + answer.toFixed(2);
+    const hist = document.createElement('p');
+    hist.id = 'hist';
+    hist.textContent = calcContainer.textContent;
+    history.appendChild(hist);
 })
-
 
 
 
