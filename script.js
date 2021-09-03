@@ -32,7 +32,7 @@ const numOneDisplay = document.getElementById('numOne')
 
 var num1= 0;
 var num2= 0;
-var oper= '+';
+var oper= '';
 
 values.forEach(button => {
     button.addEventListener('click', () => {
@@ -43,9 +43,9 @@ values.forEach(button => {
 
 operadores.forEach(button => {
     button.addEventListener('click', () => {
-        //num1= parseInt(display.textContent); 
-        
+        num1 = parseInt(numOneDisplay.textContent); 
         operatorDisplay.textContent = button.value;
+        oper = button.value; 
     })
 });
 
