@@ -21,37 +21,46 @@ function factorial(num) {
 
   
 const calculate = document.getElementById('equals');
-const display = document.getElementById('output')
 const values = document.querySelectorAll('#num');
 const clear = document.getElementById('clr');
 const operadores = document.querySelectorAll('#opr');
+const decimal = document.getElementById('dec'); 
+container = document.getElementById('container');
 
+const operatorDisplay = document.getElementById('operator');
+const numOneDisplay = document.getElementById('numOne')
 
-
+var num1= 0;
+var num2= 0;
+var oper= '+';
 
 values.forEach(button => {
     button.addEventListener('click', () => {
-        display.textContent += button.value;
+        numOneDisplay.textContent += button.value;
     });
+});
+
+
+operadores.forEach(button => {
+    button.addEventListener('click', () => {
+        //num1= parseInt(display.textContent); 
+        
+        operatorDisplay.textContent = button.value;
+    })
 });
 
 clear.addEventListener('click', () => {
     display.textContent = ''
 })
 
-operadores.forEach(button => {
-    button.addEventListener('click', () => {
-        display.textContent += button.value;
-    })
-});
 
 
+calculate.addEventListener('click', () => {
 
-calculate.addEventListener('click', (oper, numA, numB) => {
-    display.textContent.split(oper)
+    display.textContent.split(operadores)
     numA = parseInt(values).value;
     numB = parseInt(values).value
-    oper = operadores 
+    oper = operadores.value; 
     answer = operate(oper, numA, numB);
     console.log(answer);
     return display.textContent = answer;

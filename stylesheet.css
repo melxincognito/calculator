@@ -39,8 +39,8 @@ h1 {
     justify-content: center;
    
 }
-
-.output {
+.results {
+   
     background-color: white;
     opacity: 50%;
     border: dotted;
@@ -50,11 +50,24 @@ h1 {
     height: 30px;
     font-family: pacifico;
     font-size: 20px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+        
 }
+
+.num1 {
+    margin: 0 5px;
+}
+
+.oper {
+    margin: 0 5px;
+}
+
+.num2 {
+    margin: 0 5px;
+}
+
 
 input {
     height: 80px;
