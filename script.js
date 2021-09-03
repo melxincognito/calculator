@@ -25,20 +25,29 @@ const values = document.querySelectorAll('#num');
 const clear = document.getElementById('clr');
 const operadores = document.querySelectorAll('#opr');
 const decimal = document.getElementById('dec'); 
-container = document.getElementById('container');
+const container = document.getElementById('container');
+
 
 const operatorDisplay = document.getElementById('operator');
 const numOneDisplay = document.getElementById('numOne')
+const numTwoDisplay = document.getElementById('num2')
 
-var num1= 0;
-var num2= 0;
-var oper= '';
+let num1= 0;
+let num2= 0;
+let oper= '';
 
 values.forEach(button => {
     button.addEventListener('click', () => {
-        numOneDisplay.textContent += button.value;
+        if(num1 >= 1){ 
+            numTwoDisplay.textContent += button.value;
+            num2 = button.value;
+        } else {
+            numOneDisplay.textContent += button.value;
+        }
     });
 });
+
+
 
 
 operadores.forEach(button => {
@@ -50,20 +59,17 @@ operadores.forEach(button => {
 });
 
 clear.addEventListener('click', () => {
-    display.textContent = ''
+    numOneDisplay.textContent = ''
+    operatorDisplay.textContent = ''
+    numTwoDisplay.textContent = ''
 })
 
 
 
-calculate.addEventListener('click', () => {
-
-    display.textContent.split(operadores)
-    numA = parseInt(values).value;
-    numB = parseInt(values).value
-    oper = operadores.value; 
-    answer = operate(oper, numA, numB);
+calculate.addEventListener('click', () => { 
+    answer = operate(oper, num1, num2);
     console.log(answer);
-    return display.textContent = answer;
+    
 })
 
 
