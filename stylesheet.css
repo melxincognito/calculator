@@ -37,12 +37,13 @@ h1 {
     margin: auto;
     align-content: center;
     justify-content: center;
+    border-radius: 25px;
    
 }
 .results {
    
-    background-color: white;
-    opacity: 50%;
+    background-color: rgb(236, 236, 236);
+    opacity: 70%;
     border: dotted;
     padding: 30px;
     color: black;
@@ -55,8 +56,8 @@ h1 {
     justify-content: center;
     margin: 25px auto;
     white-space: nowrap;
+    border-radius: 25px;
 
-        
 }
 
 .num1 {
@@ -88,7 +89,7 @@ input {
     font-family: pacifico;
     font-size: 35px;
     align-content: center;
-    opacity: 70%;
+    opacity: 75%;
 
 }
 
