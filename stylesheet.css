@@ -52,7 +52,10 @@ h1 {
     font-size: 20px;
     display: flex;
     align-items: center;
-    margin: 20px auto;
+    justify-content: center;
+    margin: 25px auto;
+    white-space: nowrap;
+
         
 }
 
@@ -68,6 +71,12 @@ h1 {
     margin: 0 5px;
 }
 
+.output {
+    margin: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
 
 input {
     height: 80px;
@@ -86,5 +95,4 @@ input {
 .equals {
     width: 160px;
     border-radius: 50%;
-
 }
