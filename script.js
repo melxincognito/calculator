@@ -8,7 +8,7 @@ const operatorDisplay = document.getElementById('operator');
 const numOneDisplay = document.getElementById('numOne');
 const numTwoDisplay = document.getElementById('num2');
 const results = document.getElementById('output');
-const history = document.getElementById('history');
+const history = document.getElementById('histContent');
 const calcContainer = document.getElementById('results');
 
 let num1= 0;
@@ -32,6 +32,7 @@ values.forEach(button => {
 });
 
 
+
 operadores.forEach(button => {
     button.addEventListener('click', () => {
         num1 = parseFloat(numOneDisplay.textContent); 
@@ -52,17 +53,8 @@ clear.addEventListener('click', () => {
 })
 
 clear.addEventListener('dblclick', () => {
-    numOneDisplay.textContent = '';
-    operatorDisplay.textContent = '';
-    numTwoDisplay.textContent = '';
-    results.textContent = '';
-    history.removeChild(hist);
-
-    num1 = 0;
-    num2 = 0;
+    history.innerHTML = '';
 })
-
-
 
 
 calculate.addEventListener('click', () => { 
@@ -73,6 +65,7 @@ calculate.addEventListener('click', () => {
     hist.textContent = calcContainer.textContent;
     history.appendChild(hist);
 })
+
 
 
 
