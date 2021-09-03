@@ -82,12 +82,13 @@ input {
     height: 80px;
     width: 80px;
     border-radius: 50%;
-    background-color: transparent;
-    color: white;
+    background-color: white;
     border-color: white;
+    color: lime;
     font-family: pacifico;
     font-size: 35px;
     align-content: center;
+    opacity: 70%;
 
 }
 
@@ -95,4 +96,11 @@ input {
 .equals {
     width: 160px;
     border-radius: 50%;
+    opacity: 70%;
+    color: black;
+}
+
+#num {
+    color: hotpink;
+
 }

@@ -59,6 +59,8 @@ calculate.addEventListener('click', () => {
 
 
 
+
+
 //operator functions
 
 const operators = {
@@ -98,3 +100,4 @@ function operate(operator, a, b) {
             return null;
     }
 }
+
